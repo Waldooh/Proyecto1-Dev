@@ -1,0 +1,31 @@
+aside {
+    /* margin: 1rem; */
+    padding: 1rem;
+    background-color: red;
+}
+
+#aside-right {
+    background: grey;
+    border: 1rem;
+    border-color: red;
+}
+
+.box-top {
+    background-color: aqua;
+}
+
+.box-listing {
+    background-color: blue;
+}
+
+.box-news {
+    background-color: beige;
+}
+
+.box-help {
+    background-color: greenyellow;
+}
+
+.box-bottom {
+    background-color: blueviolet;
+}
