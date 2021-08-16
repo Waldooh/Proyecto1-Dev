@@ -1,0 +1,133 @@
+@import 'nav';
+@import 'article';
+
+$disp: flex;
+$disp2: none;
+
+.medio {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+@mixin left_leftOne($display) {
+    
+    .leftOne {
+        display: $display;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+    ul {
+        ol{
+            margin-left: -80px;
+            height: 35px;
+            span {
+                svg {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+}
+
+@mixin left_leftOne_active($display) {
+    
+    .leftOne {
+
+    ul {
+
+        ol:hover{
+            margin-left: -80px;
+            height: 35px;
+            cursor: pointer;
+            transition: width 2s, height 2s, background-color 2s, transform 2s, linear;
+            color: rgb(0, 0, 121); 
+            background-color: rgb(196, 196, 196);
+            span {
+                svg {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+}
+
+.medio {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin left_socialmedia($display) {
+    
+    .socialmedia{
+        margin-left: 1px;
+        display: $display;
+        flex-direction: row;
+        color: grey;
+    }
+    span{
+        width: 30px;
+        
+    }
+}
+
+@mixin left_socialmedia_action {
+    
+    span:hover{
+        width: 30px;
+        cursor: pointer;
+        transition: width 2s, height 2s, background-color 2s, transform 2s, linear;
+        background-color: rgb(196, 196, 196);
+    }
+}
+
+@mixin left_tag($display) {
+    .tag {
+        margin-top: 10px;
+        display: $display;
+        width: 180px;
+        justify-content: space-between;
+
+       h3 {
+           margin-top: 5px;
+           height: 10px;
+       }
+    }
+}
+
+
+left {
+
+    @include left_leftOne($disp);
+    @include left_leftOne_active($disp);
+    @include left_socialmedia($disp);
+    @include left_socialmedia_action;
+    @include left_tag($disp);
+    background-color: rgb(201, 201, 201);
+
+}
+
+@media (max-width: 736px) {
+
+    left {
+
+        @include left_leftOne($disp2);
+        @include left_leftOne_active($disp2);
+        @include left_socialmedia($disp2);
+        @include left_socialmedia_action;
+        @include left_tag($disp2);
+        background-color: rgb(201, 201, 201);
+    }
+    
+}
+
+nav  #avatar {
+    border-radius: 50%;
+}
+
+.leftOne h3 {
+    margin-left: -40px;
+}

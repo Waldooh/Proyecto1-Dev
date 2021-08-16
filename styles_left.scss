@@ -1,8 +1,8 @@
-$disp: flex;
+@import 'nav';
+@import 'article';
 
-body {
-    background-color: rgb(220, 220, 220);
-}
+$disp: flex;
+$disp2: none;
 
 
 @mixin left_leftOne($display) {
@@ -48,6 +48,11 @@ body {
         }
     }
 }
+}
+
+.medio {
+    display: flex;
+    flex-direction: row;
 }
 
 @mixin left_socialmedia($display) {
@@ -96,8 +101,23 @@ left {
     @include left_socialmedia($disp);
     @include left_socialmedia_action;
     @include left_tag($disp);
+    background-color: rgb(201, 201, 201);
+
 }
 
+@media (max-width: 736px) {
+
+    left {
+
+        @include left_leftOne($disp2);
+        @include left_leftOne_active($disp2);
+        @include left_socialmedia($disp2);
+        @include left_socialmedia_action;
+        @include left_tag($disp2);
+        background-color: rgb(201, 201, 201);
+    }
+    
+}
 
 nav  #avatar {
     border-radius: 50%;
@@ -106,4 +126,3 @@ nav  #avatar {
 .leftOne h3 {
     margin-left: -40px;
 }
-

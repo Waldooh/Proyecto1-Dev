@@ -1,16 +1,262 @@
-body {
-  background-color: gainsboro;
+* {
+  margin: 0;
 }
 
-nav .Navegador {
+.encabezado {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+.encabezado .barra-nav {
+  display: flex;
+  max-width: 80%;
+  min-width: 320px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  height: 56px;
+}
+.encabezado .barra-nav .hamburguesa > button {
+  padding-top: 15px;
+  float: left;
+  outline: none;
+  background: white;
+  border: 0px solid transparent;
+}
+@media (min-width: 768px) {
+  .encabezado .barra-nav .hamburguesa {
+    display: none;
+  }
+}
+.encabezado .barra-nav .logo {
+  max-width: 200px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: stretch;
+  box-sizing: border-box;
+  margin-right: 10px;
+  padding-top: 5px;
+}
+.encabezado .barra-nav .logo > .logo-dev img {
+  height: 40px;
+  width: 50px;
+}
+.encabezado .barra-nav .buscador {
+  display: flex;
+  width: 1300px;
+  padding-top: 5px;
+  flex-wrap: wrap;
+}
+.encabezado .barra-nav .buscador .buscador-form {
+  padding: 0px;
+  outline: 0;
+  display: flex;
+}
+.encabezado .barra-nav .buscador .buscador-form > input {
+  height: 36px;
+  width: 400px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  background: white;
+  border: 1px solid black;
+  border-right: 0px solid transparent;
+  font-size: 16px;
+}
+.encabezado .barra-nav .buscador .buscador-form > button {
+  height: 40px;
+  float: right;
+  outline: none;
+  background: white;
+  border: 1px solid black;
+  border-left: 0px solid transparent;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-box-decoration-break: none;
+          box-decoration-break: none;
+}
+.encabezado .barra-nav .buscador .buscador-form button > svg {
+  border-radius: 50px;
+  height: 35px;
+  width: 30px;
+  background-color: transparent;
+}
+.encabezado .barra-nav .buscador .buscador-form button > svg svg:hover {
+  border: solid 1px #1b1b1b;
+  background-color: #1b1b1b;
+}
+@media (max-width: 780px) {
+  .encabezado .barra-nav .buscador .buscador-form .buscador {
+    width: 5px;
+    justify-content: flex-end;
+  }
+  .encabezado .barra-nav .buscador .buscador-form input {
+    display: none;
+  }
+  .encabezado .barra-nav .buscador .buscador-form button {
+    float: right;
+    border-radius: 5px;
+    border-left: 1px solid black;
+    justify-content: flex-end;
+  }
+}
+.encabezado .barra-nav .left {
+  display: flex;
+  width: 500px;
+  padding: 5px;
+  justify-content: flex-end;
+}
+.encabezado .barra-nav .left .post-form-btn {
+  Background-color: #3b49df;
+  display: block;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font: size 16px;
+  font-weight: 500;
+  height: 43px;
+  margin-right: 10px;
+  text-align: center;
+  font-family: roboto, arial, helvetica, sans-serif;
+}
+.encabezado .barra-nav .left .post-form-btn:hover {
+  Background-color: #323ebe;
+}
+@media (max-width: 768px) {
+  .encabezado .barra-nav .left .post-form-btn {
+    display: none;
+  }
+}
+.encabezado .barra-nav .left .chat svg {
+  height: 45px;
+  width: 26px;
+  border-radius: 56px;
+  margin-right: 10px;
+}
+.encabezado .barra-nav .left .chat svg:hover {
+  background-color: rgba(0, 0, 0, 0.035);
+}
+.encabezado .barra-nav .left .bell svg {
+  height: 45px;
+  width: 26px;
+  border-radius: 56px;
+  margin-right: 10px;
+}
+.encabezado .barra-nav .left .bell svg:hover {
+  background-color: rgba(0, 0, 0, 0.035);
+}
+.encabezado .barra-nav .left .profile {
+  display: flex;
+  flex-direction: column;
+}
+.encabezado .barra-nav .left .profile a > img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+}
+.encabezado .barra-nav .left .collapse-bar {
+  display: none;
+}
+.encabezado .barra-nav .left ul {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+}
+.encabezado .barra-nav .left ul li {
+  text-align: start;
+  padding: 5px;
+}
+.encabezado .barra-nav .left:hover .collapse-bar {
+  display: block;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid black;
+  list-style: none;
+  text-align: left;
+}
+.encabezado .barra-nav .left:hover .collapse-bar li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-color: red;
+}
+
+article.card_posts {
+  background-color: red;
+  padding: 1px;
+  border-radius: 2%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px !important;
+}
+
+.card_img {
+  width: 100%;
+  height: auto;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  padding: auto;
+}
+
+.img_post {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+h4 {
+  margin: 0 5px;
+  line-height: 17.5px;
+  font-weight: lighter;
+}
+
+p {
+  display: flex;
+  justify-content: stretch;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.hashtags {
+  font-size: 14px;
+  line-height: 13px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.reactions {
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-nav img {
-  width: 40px;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
+button {
+  background-color: #d2d6db;
+}
+
+.medio {
+  display: flex;
+  flex-direction: row;
+}
+
+left {
+  background-color: #c9c9c9;
+}
 left .leftOne {
   display: flex;
   flex-direction: row;
@@ -61,6 +307,60 @@ left .tag h3 {
   height: 10px;
 }
 
+@media (max-width: 736px) {
+  left {
+    background-color: #c9c9c9;
+  }
+  left .leftOne {
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  left .leftOne ul ol {
+    margin-left: -80px;
+    height: 35px;
+  }
+  left .leftOne ul ol span svg {
+    height: 20px;
+  }
+  left .leftOne ul ol:hover {
+    margin-left: -80px;
+    height: 35px;
+    cursor: pointer;
+    transition: width 2s, height 2s, background-color 2s, transform 2s, linear;
+    color: #000079;
+    background-color: #c4c4c4;
+  }
+  left .leftOne ul ol:hover span svg {
+    height: 20px;
+  }
+  left .socialmedia {
+    margin-left: 1px;
+    display: none;
+    flex-direction: row;
+    color: grey;
+  }
+  left span {
+    width: 30px;
+  }
+  left span:hover {
+    width: 30px;
+    cursor: pointer;
+    transition: width 2s, height 2s, background-color 2s, transform 2s, linear;
+    background-color: #c4c4c4;
+  }
+  left .tag {
+    margin-top: 10px;
+    display: none;
+    width: 180px;
+    justify-content: space-between;
+  }
+  left .tag h3 {
+    margin-top: 5px;
+    height: 10px;
+  }
+}
 nav #avatar {
   border-radius: 50%;
 }
