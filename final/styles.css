@@ -3,13 +3,17 @@
 }
 
 .encabezado {
+  width: 100%;
   height: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: row;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
 }
 .encabezado .barra-nav {
   display: flex;
-  max-width: 80%;
+  max-width: 100%;
   min-width: 320px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   justify-content: space-around;
@@ -183,7 +187,7 @@ body {
 }
 
 article.card_posts {
-  background-color: rgb(129, 172, 212);
+  background-color: white;
   padding: 12px;
   border-radius: 2%;
   margin-bottom: 10px;
@@ -246,6 +250,14 @@ p {
 
 button {
   background-color: #d2d6db;
+  border-radius: 5px;
+  -webkit-appearance: button;
+  cursor: pointer;
+  border-bottom: transparent;
+}
+
+body {
+  font-family: var(--ff-sans-serif);
 }
 
 .medio {
@@ -267,9 +279,10 @@ left .leftOne {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  margin-top: 80px;
 }
 left .leftOne ul ol {
-  margin-left: -80px;
+  margin-left: -60px;
   height: 35px;
 }
 left .leftOne ul ol span svg {
@@ -321,9 +334,10 @@ left .tag h3 {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-top: 80px;
   }
   left .leftOne ul ol {
-    margin-left: -80px;
+    margin-left: -60px;
     height: 35px;
   }
   left .leftOne ul ol span svg {

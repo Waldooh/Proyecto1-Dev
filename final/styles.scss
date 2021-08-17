@@ -4,6 +4,10 @@
 $disp: flex;
 $disp2: none;
 
+body{
+    font-family: var(--ff-sans-serif);
+}
+
 .medio {
     display: flex;
     flex-direction: row;
@@ -17,10 +21,10 @@ $disp2: none;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
-        
+        margin-top: 80px;;
     ul {
         ol{
-            margin-left: -80px;
+            margin-left: -60px;
             height: 35px;
             span {
                 svg {
@@ -100,7 +104,6 @@ $disp2: none;
 
 
 left {
-
     @include left_leftOne($disp);
     @include left_leftOne_active($disp);
     @include left_socialmedia($disp);

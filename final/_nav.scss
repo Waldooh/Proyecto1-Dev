@@ -18,14 +18,18 @@
 
 .encabezado{
     // border: 3px solid rebeccapurple;
+    width: 100%;
     height: 60px;
     display:flex;
-    justify-content:center;
+    justify-content:row;
+    background-color: white;
+    position: fixed;
+  z-index: 100;
     .barra-nav{
         display: flex;
         // border: yellow 3px solid;
         // background-color:orange;
-        max-width: 80%;
+        max-width: 100%;
         min-width: 320px;
         box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         justify-content: space-around;

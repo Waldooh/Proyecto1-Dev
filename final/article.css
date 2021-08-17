@@ -1,9 +1,9 @@
 body{
-    background-color: #eef0f1;
+    background-color: #eef0f1;   
 } 
 
 article.card_posts{
-background-color: rgb(129, 172, 212);
+background-color:white;
 padding: 12px;
 border-radius: 2%;
 margin-bottom: 10px;
@@ -67,4 +67,8 @@ p{
 
 button{
     background-color: #d2d6db;
+    border-radius: 5px;
+    -webkit-appearance: button;
+    cursor: pointer;
+    border-bottom: transparent;
 }
